@@ -52,6 +52,12 @@ fn problem_3() {
     println!("Longest substring in alphabetical order is: {}", top);
 }
 
-fn main() {
-    problem_3();
+#[cfg(test)]
+mod tests {
+    // use super::*;
+
+    #[test]
+    fn problem_1_tests() {
+        // assert_eq!(result, 4);
+    }
 }
