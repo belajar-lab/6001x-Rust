@@ -76,7 +76,8 @@ A summary of the required math is found below:
 > - **Monthly unpaid balance** = (Previous balance) - (Minimum monthly payment)
 > - **Updated balance each month** = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 
-> [!TIP] **How to think about this problem?**
+> [!TIP]
+> **How to think about this problem?**
 > To help you get started, here is a rough outline of the stages you should probably follow in writing your code:
 >
 > - For each month:
