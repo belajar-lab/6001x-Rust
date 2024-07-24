@@ -6,26 +6,26 @@ Say you've made a $5,000 purchase on a credit card with an 18% annual interest r
 
 You can think about this in the following way.
 
-At the beginning of month 0 (when the credit card statement arrives), assume you owe an amount we will call $b_0$ ($b$ for *balance*; subscript $0$ to indicate this is the balance at month $0$).
+At the beginning of month 0 (when the credit card statement arrives), assume you owe an amount we will call $`b_0`$ ($b$ for *balance*; subscript $`0`$ to indicate this is the balance at month $`0`$).
 
-Any payment you make during that month is deducted from the balance. Let's call the payment you make in month 0, $p_0$. Thus, your **unpaid balance** for month 0, $ub_0$, is equal to $`b_0 - p_0`$.
+Any payment you make during that month is deducted from the balance. Let's call the payment you make in month 0, $`p_0`$. Thus, your **unpaid balance** for month 0, $`ub_0`$, is equal to $`b_0 - p_0`$.
 
-$$
+```math
 ub_0 = b_0 - p_0
-$$
+```
 
-At the beginning of month 1, the credit card company will charge you interest on your unpaid balance. So if your annual interest rate is $r$, then at the beginning of month 1, your new balance is your previous unpaid balance $ub_0$, **plus** the interest on this unpaid balance for the month. In algebra, this new balance would be
+At the beginning of month 1, the credit card company will charge you interest on your unpaid balance. So if your annual interest rate is $`r`$, then at the beginning of month 1, your new balance is your previous unpaid balance $`ub_0`$, **plus** the interest on this unpaid balance for the month. In algebra, this new balance would be
 
-$$
+```math
 b_1 = ub_0 + \frac{r}{12.0}\cdot ub_0
-$$
+```
 
-In month 1, we will make another payment, $p_1$. That payment has to cover some of the interest costs, so it does not completely go towards paying off the original charge. The balance at the beginning of month 2, $b_2$, can be calculated by first calculating the unpaid balance after paying $p_1$, then by adding the interest accrued:
+In month 1, we will make another payment, $`p_1`$. That payment has to cover some of the interest costs, so it does not completely go towards paying off the original charge. The balance at the beginning of month 2 $`b_2`$, can be calculated by first calculating the unpaid balance after paying $`p_1`$, then by adding the interest accrued:
 
-$$
+```math
 ub_1 = b_1 - p_1\\
 b_2 = ub_1 + \frac{r}{12.0} \cdot ub_1
-$$
+```
 
 If you choose just to pay off the minimum monthly payment each month, you will see that the compound interest will dramatically reduce your ability to lower your debt.
 
