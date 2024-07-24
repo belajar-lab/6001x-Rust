@@ -10,5 +10,6 @@ pub fn calculate_remaining_balance(
         balance *= (1.0 - monthly_payment_rate) * (1.0 + monthly_interest_rate);
     }
 
-    balance
+    // Round balance to two decimal places
+    (balance * 100.0).round() / 100.0
 }
