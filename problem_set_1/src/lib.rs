@@ -1,17 +1,13 @@
-fn problem_1() {
-    let s = "azcbobobegghakl";
-
+pub fn count_vowels(s: &str) -> i32 {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     let vowels_count = s.chars()
         .filter(|&c| vowels.contains(&c.to_ascii_lowercase()))
         .count(); 
 
-    println!("Number of vowels: {}", vowels_count);
+    vowels_count as i32
 }
 
-fn problem_2() {
-    let s = "azcbobobegghakl";
-
+pub fn count_bob(s: &str) -> i32 {
     let chars: Vec<char> = s.chars().collect();
     let mut counter = 0;
     let mut start = 0;
@@ -25,11 +21,10 @@ fn problem_2() {
         end += 1;
     }
 
-    println!("Number of times bob occurs is: {}", counter);
+    counter
 }
 
-fn problem_3() {
-    let s = String::from("azcbobobegghakl");
+pub fn longest_substring(s: &str) -> String {
     let mut top = String::new();
     let mut current = String::new();
 
@@ -49,7 +44,7 @@ fn problem_3() {
         top = current;
     }
 
-    println!("Longest substring in alphabetical order is: {}", top);
+    top
 }
 
 #[cfg(test)]
