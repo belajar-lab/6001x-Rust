@@ -75,3 +75,16 @@ A summary of the required math is found below:
 > - **Minimum monthly payment** = (Minimum monthly payment rate) x (Previous balance)
 > - **Monthly unpaid balance** = (Previous balance) - (Minimum monthly payment)
 > - **Updated balance each month** = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
+
+> [!TIP]
+> **How to think about this problem?**
+> To help you get started, here is a rough outline of the stages you should probably follow in writing your code:
+>
+> - For each month:
+>     - Compute the monthly payment, based on the previous month’s balance.
+>     - Update the outstanding balance by removing the payment, then charging interest on the result.
+>     - Output the month, the minimum monthly payment and the remaining balance.
+>     - Keep track of the total amount of paid over all the past months so far.
+> - Print out the result statement with the total amount paid and the remaining balance.
+> 
+> Use these ideas to guide the creation of your code.
