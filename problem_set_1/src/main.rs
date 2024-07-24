@@ -28,6 +28,30 @@ fn problem_2() {
     println!("Number of times bob occurs is: {}", counter);
 }
 
+fn problem_3() {
+    let s = String::from("azcbobobegghakl");
+    let mut top = String::new();
+    let mut current = String::new();
+
+    for c in s.chars() {
+        if current.is_empty() || c >= current.chars().last().unwrap() {
+            current.push(c);
+        } else {
+            if top.len() < current.len() {
+                top = current;
+            }
+            current = c.to_string();
+        }
+    }
+
+    // Final check after loop ends
+    if top.len() < current.len() {
+        top = current;
+    }
+
+    println!("Longest substring in alphabetical order is: {}", top);
+}
+
 fn main() {
-    problem_2();
+    problem_3();
 }
