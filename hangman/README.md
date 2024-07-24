@@ -23,7 +23,6 @@ Here are the requirements for your game:
 <details>
     <summary>The output of a winning game should look like this...</summary>
 
-    ```
     Loading word list from file...
     55900 words loaded.
     Welcome to the game, Hangman!
@@ -65,12 +64,13 @@ Here are the requirements for your game:
     Good guess: tact
     ------------
     Congratulations, you won!
-    ```
 </details>
 
 <details>
-    <summary>And the output of a losing game should look like this...</summary>
-    ```
+    <summary>
+    And the output of a losing game should look like this...
+    </summary>
+    
     Loading word list from file...
     55900 words loaded.
     Welcome to the game Hangman!
@@ -122,7 +122,6 @@ Here are the requirements for your game:
     Oops! That letter is not in my word: e_ _ e
     -----------
     Sorry, you ran out of guesses. The word was else.
-    ```
 </details>
 
 On the next page, we'll break down the problem into logical sub-tasks, creating helper functions you will need to have in order for this game to work.
