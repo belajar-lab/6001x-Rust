@@ -8,7 +8,7 @@ You can think about this in the following way.
 
 At the beginning of month 0 (when the credit card statement arrives), assume you owe an amount we will call $b_0$ ($b$ for *balance*; subscript $0$ to indicate this is the balance at month $0$).
 
-Any payment you make during that month is deducted from the balance. Let's call the payment you make in month 0, $p_0$. Thus, your **unpaid balance** for month 0, $ub_0$, is equal to $b_0 - p_0$.
+Any payment you make during that month is deducted from the balance. Let's call the payment you make in month 0, $p_0$. Thus, your **unpaid balance** for month 0, $ub_0$, is equal to $`b_0 - p_0`$.
 
 $$
 ub_0 = b_0 - p_0
