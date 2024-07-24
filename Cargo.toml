@@ -1,6 +1,6 @@
 [workspace]
 
-members = [
+members = [ "paying_debt_off_in_a_year",
     "problem_set_1",
     # "paying_debt_off_in_a_year",
     # "hangman",
