@@ -6,7 +6,7 @@ For this problem, we will implement a variation of the classic wordgame Hangman.
 
 Here are the requirements for your game:
 
-1. The computer must select a word at random from the list of available words that was provided in `words.txt`. The functions for loading the word list and selecting a random word have already been provided for you in `ps3_hangman.py`.
+1. The computer must select a word at random from the list of available words in `words.txt`.
 2. The game must be interactive; the flow of the game should go as follows:
     - At the start of the game, let the user know how many letters the computer's word contains.
     - Ask the user to supply one guess (i.e. letter) per round.
@@ -124,4 +124,4 @@ Here are the requirements for your game:
     Sorry, you ran out of guesses. The word was else.
 </details>
 
-On the next page, we'll break down the problem into logical sub-tasks, creating helper functions you will need to have in order for this game to work.
+We'll break down the problem into logical sub-tasks, creating helper functions in order for this game to work.
