@@ -1,5 +1,60 @@
 use std::collections::HashSet;
 
+use rand::seq::SliceRandom;
+use std::fs::File;
+use std::io::{BufRead, BufReader};
+use std::path::Path;
+
+const WORDLIST_FILENAME: &str = "hangman/data/words.txt";
+
+/// Loads words from a file.
+///
+/// This function reads words from a file named "words.txt".
+/// Words are expected to be lowercase letters, separated by whitespace.
+///
+/// **Returns**:
+/// - A vector of strings containing the loaded words.
+///
+/// **Panics**:
+/// - Panics if the file cannot be opened, is empty, or if reading fails.
+fn load_words() -> Vec<String> {
+    println!("Loading word list from file...");
+
+    let path = Path::new(WORDLIST_FILENAME);
+    let file = File::open(path).expect("Failed to open file");
+    let reader = BufReader::new(file);
+
+    let wordlist: Vec<String> = reader
+        .lines()
+        .next()
+        .expect("File is empty")
+        .expect("Failed to read line")
+        .split_whitespace()
+        .map(String::from)
+        .collect();
+
+    println!("  {} words loaded.", wordlist.len());
+    wordlist
+}
+
+/// Chooses a random word from the given word list.
+///
+/// **Arguments**:
+/// * `wordlist` - A slice of strings to choose from.
+///
+/// **Returns**:
+/// * A reference to a randomly selected word from the list.
+///
+/// **Panics**:
+/// - Panics if the wordlist is empty.
+pub fn random_word() -> String {
+    let wordlist = load_words();
+    wordlist
+        .choose(&mut rand::thread_rng())
+        .expect("Wordlist is empty")
+        .to_string()
+}
+
 /// Checks if all the letters of the secret word have been guessed.
 ///
 /// **Arguments:**
