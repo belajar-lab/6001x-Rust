@@ -125,3 +125,20 @@ Here are the requirements for your game:
 </details>
 
 We'll break down the problem into logical sub-tasks, creating helper functions in order for this game to work.
+
+
+## Is the Word Guessed
+
+We'll start by writing 3 simple functions that will help us easily code the Hangman problem. First, implement the function `is_word_guessed` that takes in two parameters - a string, `secret_word`, and a list of letters, `letters_guessed`. This function returns a boolean - `true` if `secret_word` has been guessed (i.e., all the letters of `secret_word` are in `letters_guessed`) and `false` otherwise.
+
+Example Usage:
+
+```rust
+let secret_word = "apple";
+let letters_guessed = vec!['e', 'i', 'k', 'p', 'r', 's'];
+
+let answer = is_word_guessed(secret_word, &letters_guessed);
+assert_eq!(answer, false)
+```
+
+For this function, you may assume that all the letters in `secret_word` and `letters_guessed` are lowercase.
