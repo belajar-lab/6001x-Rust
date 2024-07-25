@@ -163,3 +163,21 @@ When inserting underscores into your string, it's a good idea to add at least a 
 For this problem, you are free to use spacing in any way you wish - our grader will only check that the letters and underscores are in the proper order; it will not look at spacing. We do encourage you to think about usability when designing.
 
 For this function, you may assume that all the letters in `secret_word` and `letters_guessed` are lowercase.
+
+
+## Printing Out all Available Letters
+
+Next, implement the function `get_available_letters` that takes in one parameter - a list of letters, `letters_guessed`. This function returns a string that is comprised of lowercase English letters - all lowercase English letters that are **not** in `letters_guessed`.
+
+Example Usage:
+
+```rust
+let letters_guessed = vec!['e', 'i', 'k', 'p', 'r', 's'];
+
+let answer = get_available_letters(&letters_guessed);
+assert_eq!(answer, "abcdfghjlmnoqtuvwxyz");
+```
+
+Note that this function should return the letters in alphabetical order, as in the example above.
+
+For this function, you may assume that all the letters in `letters_guessed` are lowercase.

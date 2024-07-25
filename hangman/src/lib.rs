@@ -6,7 +6,7 @@ use std::collections::HashSet;
 /// * `secret_word` - A string slice that holds the word the user is guessing.
 /// * `letters_guessed` - A slice of characters that have been guessed so far.
 ///
-/// **Returns:** 
+/// **Returns:**
 /// * `true` if all the letters of the secret word are in the letters guessed.
 /// * `false` otherwise.
 ///
@@ -35,13 +35,13 @@ pub fn is_word_guessed(secret_word: &str, letters_guessed: &[char]) -> bool {
 /// **Returns:**
 /// * A `String` comprised of letters and underscores that represents what letters
 /// in the secret word have been guessed so far.
-/// 
+///
 /// # Example:
 
 /// ```
 /// let secret_word = "apple";
 /// let letters_guessed = vec!['e', 'i', 'k', 'p', 'r', 's'];
-/// 
+///
 /// let result = hangman::get_guessed_word(secret_word, &letters_guessed);
 /// assert_eq!(result, "_pp_e".to_string())
 /// ```
@@ -49,5 +49,26 @@ pub fn get_guessed_word(secret_word: &str, letters_guessed: &[char]) -> String {
     secret_word
         .chars()
         .map(|c| if letters_guessed.contains(&c) { c } else { '_' })
+        .collect()
+}
+
+/// Returns a string of available letters that have not been guessed.
+///
+/// **Arguments**:
+/// * `letters_guessed` - A slice of characters representing the letters that have been guessed so far.
+///
+/// **Returns**:
+/// * A String containing all letters of the alphabet that have not been guessed, in alphabetical order.
+///
+/// # Example
+/// ```
+/// let letters_guessed = vec!['e', 'i', 'k', 'p', 'r', 's'];
+///
+/// let answer = hangman::get_available_letters(&letters_guessed);
+/// assert_eq!(answer, "abcdfghjlmnoqtuvwxyz");
+/// ```
+pub fn get_available_letters(letters_guessed: &[char]) -> String {
+    ('a'..='z')
+        .filter(|&c| !letters_guessed.contains(&c))
         .collect()
 }
