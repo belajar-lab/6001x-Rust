@@ -4,7 +4,7 @@ members = [
     "problem_set_1",
     "paying_debt_off_in_a_year",
     "hangman",
-    # "wordgame",
+    "wordgame",
     # "problem_set_5",
     # "problem_set_6",
 ]
